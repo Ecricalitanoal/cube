@@ -14,7 +14,73 @@ int randomCubeNumber()
 	random1 = rand() % 6 + 1;
 	random2 = rand() % 6 + 1;
 	std::cout << "Выпало: \n";
-	std::cout << " =====   =====\n|     | |     |\n|  " << random1 <<"  | |  " << random2 << "  |\n|     | |     |\n =====   ===== \n";
+	switch (random1)
+	{
+	case 1:
+	{
+		std::cout << " =====\n|     |\n|  *  |\n|     |\n =====";
+		break;
+	}
+	case 2:
+	{
+		std::cout << " =====\n|*    |\n|     |\n|    *|\n =====";
+		break;
+	}
+	case 3:
+	{
+		std::cout << " =====\n|*    |\n|  *  |\n|    *|\n =====";
+		break;
+	}
+	case 4:
+	{
+		std::cout << " =====\n|*   *|\n|     |\n|*   *|\n =====";
+		break;
+	}
+	case 5:
+	{
+		std::cout << " =====\n|*   *|\n|  *  |\n|*   *|\n =====";
+		break;
+	}
+	case 6:
+	{
+		std::cout << " =====\n|* * *|\n|     |\n|* * *|\n =====";
+		break;
+	}
+	}
+	std::cout << '\n';
+	switch (random2)
+	{
+	case 1:
+	{
+		std::cout << " =====\n|     |\n|  *  |\n|     |\n =====";
+		break;
+	}
+	case 2:
+	{
+		std::cout << " =====\n|*    |\n|     |\n|    *|\n =====";
+		break;
+	}
+	case 3:
+	{
+		std::cout << " =====\n|*    |\n|  *  |\n|    *|\n =====";
+		break;
+	}
+	case 4:
+	{
+		std::cout << " =====\n|*   *|\n|     |\n|*   *|\n =====";
+		break;
+	}
+	case 5:
+	{
+		std::cout << " =====\n|*   *|\n|  *  |\n|*   *|\n =====";
+		break;
+	}
+	case 6:
+	{
+		std::cout << " =====\n|* * *|\n|     |\n|* * *|\n =====";
+		break;
+	}
+	}	
 	return random1 + random2;
 }
 
@@ -36,6 +102,3 @@ void moveChoicer(int& x)
 	if (x == 1) x = -1;
 	else x = 1;
 }
-
-
-
