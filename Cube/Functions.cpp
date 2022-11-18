@@ -8,6 +8,7 @@ int playerChoicer()
 	int random = rand() % 2;
 	return random;
 }
+
 int randomCubeNumber()
 {
 	int random1, random2;
@@ -97,8 +98,14 @@ void winChoicer(int x, int y)
 	else if (x < y) std::cout << "Выиграл компьютер!\n";
 	else std::cout << "Ничья!\n";
 }
+
 void moveChoicer(int& x)
 {
 	if (x == 1) x = -1;
 	else x = 1;
+}
+
+void que(int queue)
+{
+	if (queue % 2 == 0) std::cout << '\n' << queue / 2 + 1 << "-ый ход.\n";
 }

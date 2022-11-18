@@ -10,6 +10,7 @@ int main()
     //1 - Human, -1 - Computer
     for (int i = 0; i < 8; i++)
     {
+        que(i);
         if (player == 1)
         {
             std::cout << "Бросает человек! \n";
