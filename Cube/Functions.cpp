@@ -87,7 +87,6 @@ int randomCubeNumber()
 
 void solution(int randomNumber, int& score)
 {
-
 	score += randomNumber;
 	std::cout << '\n';
 }
@@ -108,4 +107,13 @@ void moveChoicer(int& x)
 void que(int queue)
 {
 	if (queue % 2 == 0) std::cout << '\n' << queue / 2 + 1 << "-ый ход.\n";
+}
+
+void scoreW(int a, int s1, int s2)
+{
+	if (a % 2 == 0)
+	{
+		std::cout << "Очки человека: " << s1 << '\n';
+		std::cout << "Очки комьютера: " << s2 << '\n' << '\n';
+	}
 }

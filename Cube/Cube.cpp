@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <ctime>
 #include "Cube.h"
 int main()
 {
@@ -27,11 +28,7 @@ int main()
             moveChoicer(player);
             ik++;
         }
-        if (ik % 2 == 0)
-        {
-            std::cout << "Очки человека: " << scoreHuman << '\n';
-            std::cout << "Очки комьютера: " << scoreComputer << '\n' << '\n';
-        }
+        scoreW(ik, scoreHuman, scoreComputer);
     }
     winChoicer(scoreHuman, scoreComputer);
 }
