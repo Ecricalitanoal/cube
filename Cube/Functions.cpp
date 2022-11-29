@@ -6,6 +6,7 @@ int playerChoicer()
 {
 	srand(time(0));
 	int random = rand() % 2;
+	if (random == 0) random = -1;
 	return random;
 }
 
@@ -82,12 +83,19 @@ int randomCubeNumber()
 		break;
 	}
 	}	
+	std::cout << '\n';
 	return random1 + random2;
 }
 
-void solution(int randomNumber, int& score)
+void solution(int randomNumber, int& scoreComp, int &scoreHuman, int player)
 {
-	score += randomNumber;
+	if (player == 1) {
+		scoreHuman += randomNumber;
+	}
+	if (player == -1) {
+		scoreComp += randomNumber;
+	}
+	//score += randomNumber;
 	std::cout << '\n';
 }
 
@@ -104,9 +112,11 @@ void moveChoicer(int& x)
 	else x = 1;
 }
 
-void que(int queue)
+void que(int queue, int pl)
 {
 	if (queue % 2 == 0) std::cout << '\n' << queue / 2 + 1 << "-ый ход.\n";
+	if (pl == 1) std::cout << "Бросает человек! \n";
+	else if (pl == -1) std::cout << "Бросает компьютер! \n";
 }
 
 void scoreW(int a, int s1, int s2)

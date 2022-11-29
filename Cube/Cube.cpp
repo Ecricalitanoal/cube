@@ -7,28 +7,15 @@ int main()
     srand(time(NULL));
     int player, scoreHuman = 0, scoreComputer = 0, score, ik = 0;
     player = playerChoicer();
-    if (player == 0) player = -1;
-    //1 - Human, -1 - Computer
     for (int i = 0; i < 8; i++)
     {
-        que(i);
-        if (player == 1)
-        {
-            std::cout << "Бросает человек! \n";
-            score = randomCubeNumber();
-            solution(score, scoreHuman);
-            moveChoicer(player);
-            ik++;
-        }
-        else if (player == -1)
-        {
-            std::cout << "Бросает компьютер! \n";
-            score = randomCubeNumber();
-            solution(score, scoreComputer);
-            moveChoicer(player);
-            ik++;
-        }
+        que(i, player);
+        score = randomCubeNumber();
+        solution(score, scoreComputer, scoreHuman, player);
+        moveChoicer(player);
+        ik++;
         scoreW(ik, scoreHuman, scoreComputer);
+
     }
     winChoicer(scoreHuman, scoreComputer);
 }
