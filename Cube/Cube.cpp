@@ -12,10 +12,8 @@ int main()
         que(i, player);
         score = randomCubeNumber();
         solution(score, scoreComputer, scoreHuman, player);
-        moveChoicer(player);
-        ik++;
+        moveChoicer(player, ik);
         scoreW(ik, scoreHuman, scoreComputer);
-
     }
     winChoicer(scoreHuman, scoreComputer);
 }

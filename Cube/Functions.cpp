@@ -106,10 +106,11 @@ void winChoicer(int x, int y)
 	else std::cout << "Ничья!\n";
 }
 
-void moveChoicer(int& x)
+void moveChoicer(int& x, int &iko)
 {
 	if (x == 1) x = -1;
 	else x = 1;
+	iko++;
 }
 
 void que(int queue, int pl)

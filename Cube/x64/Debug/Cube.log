@@ -1,3 +1,6 @@
 ﻿  Cube.cpp
 C:\Users\danil\source\repos\Cube\Cube\Cube.cpp(7,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Functions.cpp
+C:\Users\danil\source\repos\Cube\Cube\Functions.cpp(7,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода...
   Cube.vcxproj -> C:\Users\danil\source\repos\Cube\x64\Debug\Cube.exe
